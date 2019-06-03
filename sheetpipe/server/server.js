@@ -8,6 +8,7 @@ app.get('/', function (req, res) {
 
 app.get('/spreadsheet', function(req, res) {
     res.send(doc)
+    console.log(doc)
 })
 
 var server = app.listen(8081, function() {
