@@ -1,6 +1,6 @@
 var express = require('express')
 var app = express()
-var { rows, doc }= require('./../sheetsapi/spreadsheet')
+var { rows, doc }= require('./../api/spreadsheet')
 
 app.get('/', function (req, res) {
     res.send('hello saeon')
@@ -8,7 +8,6 @@ app.get('/', function (req, res) {
 
 app.get('/spreadsheet', function(req, res) {
     res.send(doc)
-    console.log(doc)
 })
 
 var server = app.listen(8081, function() {
