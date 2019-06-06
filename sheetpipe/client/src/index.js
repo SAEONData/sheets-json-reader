@@ -6,7 +6,7 @@ import { useFetch } from 'react-hooks-fetch'
 const Err = ({ error }) => <span>Error:{error.message}</span> 
 
 const DisplayRemoteData = () => {
-  const url = 'http://localhost:8081/spreadsheet' 
+  const url = 'http://192.168.112.141:8081/spreadsheet' 
   const { error, data } = useFetch(url) 
   if (error) return <Err error={error} /> 
   if (!data) return null 
