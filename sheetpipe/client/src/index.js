@@ -1,22 +1,22 @@
-import React, { Suspense } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Suspense } from 'react' 
+import ReactDOM from 'react-dom' 
 
-import { useFetch } from 'react-hooks-fetch';
+import { useFetch } from 'react-hooks-fetch' 
 
-const Err = ({ error }) => <span>Error:{error.message}</span>;
+const Err = ({ error }) => <span>Error:{error.message}</span> 
 
 const DisplayRemoteData = () => {
-  const url = 'http://192.168.111.83:8081/spreadsheet';
-  const { error, data } = useFetch(url);
-  if (error) return <Err error={error} />;
-  if (!data) return null;
-  return <span>RemoteData:{data.title}</span>;
-};
+  const url = 'http://192.168.111.83:8081/spreadsheet' 
+  const { error, data } = useFetch(url) 
+  if (error) return <Err error={error} /> 
+  if (!data) return null 
+  return <span>RemoteData:{data.title}</span> 
+} 
 
 const App = () => (
   <Suspense fallback={<span>Loading...</span>}>
     <DisplayRemoteData />
   </Suspense>
-);
+) 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root')) 
