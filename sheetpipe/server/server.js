@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
 app.get('/spreadsheet', function(req, res) {
     let rows = require('./public/input')
     res.sendFile(__dirname + '/public/input.json')
-    console.log(rows)
+    console.log(__dirname)
 })
 
 
