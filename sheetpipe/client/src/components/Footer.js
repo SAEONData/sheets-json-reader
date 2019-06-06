@@ -5,7 +5,7 @@ import footerConfig from '../config/footerConfig'
 
 
 function footerData(props)  {
-    return <Footer>{props.section}</Footer>
+    return <Footer>{props.sections && sections.data.map}</Footer>
 }
 
 export default footerData
