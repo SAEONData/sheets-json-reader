@@ -8,14 +8,14 @@ app.use(express.static('public'))
 app.use(cors())
 
 
-app.get('/', function (req, res) {
+app.get('/', function (req, res, next) {
     res.send('hello saeon')
 })
 
-app.get('/spreadsheet', function(req, res) {
+app.get('/spreadsheet', function(req, res, next) {
     let rows = require('./public/input')
     res.sendFile(__dirname + '/public/input.json')
-    console.log(__dirname)
+    console.log(__dirname + 'here')
 })
 
 

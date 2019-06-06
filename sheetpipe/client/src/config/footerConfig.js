@@ -1,4 +1,4 @@
-import data from '../data/sheetdata'
+
 
 export default {
     sections: [
