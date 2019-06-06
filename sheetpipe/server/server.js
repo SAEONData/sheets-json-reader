@@ -1,9 +1,11 @@
 var express = require('express')
 var app = express()
+var cors = require('cors')
 // var { rows, doc } = require('./../api/spreadsheet')
 
 /* this line tells Express to use the public folder as our static folder from which we can serve static files*/
-app.use(express.static('public')); 
+app.use(express.static('public'))
+app.use(cors())
 
 
 app.get('/', function (req, res) {
