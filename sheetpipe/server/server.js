@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
 
 app.get('/spreadsheet', function(req, res) {
     let rows = require('./public/input')
-    res.sendFile('/home/sheets-json-reader/sheetpipe/server/public/input.json')
+    res.sendFile(__dirname + '/public/input.json')
     console.log(rows)
 })
 
