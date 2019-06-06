@@ -2,13 +2,17 @@ var express = require('express')
 var app = express()
 // var { rows, doc } = require('./../api/spreadsheet')
 
+/* this line tells Express to use the public folder as our static folder from which we can serve static files*/
+app.use(express.static('public')); 
+
+
 app.get('/', function (req, res) {
     res.send('hello saeon')
 })
 
 app.get('/spreadsheet', function(req, res) {
-    let rows = require('./input')
-    res.sendFile('/home/sheets-json-reader/sheetpipe/server/input.json')
+    let rows = require('./public/input')
+    res.sendFile('/home/sheets-json-reader/sheetpipe/server/public/input.json')
     console.log(rows)
 })
 
