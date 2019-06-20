@@ -1,7 +1,7 @@
 var express = require('express')
 var app = express()
 var cors = require('cors')
-// var { rows, doc } = require('./../api/spreadsheet')
+var rows = require('./../api/spreadsheet')
 
 /* this line tells Express to use the public folder as our static folder from which we can serve static files*/
 app.use(express.static('public'))
@@ -13,9 +13,9 @@ app.get('/', function (req, res, next) {
 })
 
 app.get('/spreadsheet', function(req, res, next) {
-    let rows = require('./public/input')
-    res.sendFile(__dirname + '/public/input.json')
-    console.log(__dirname + 'here')
+    let rows = require('./../api/spreadsheet')
+    res.send(rows)
+//    console.log(rows)
 })
 
 
