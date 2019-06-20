@@ -3,7 +3,7 @@ let creds = require('./client_secret.json')
 let fs = require('fs')
 
 // specify google sheet id
-let doc = new GoogleSpreadsheet('1mkcJSmxJJk6mM-Cv5dOiIikvaRqi6vezyCTm5a6atWI')
+let doc = new GoogleSpreadsheet('1WOn0gCd4jdJWRGVK28REgq8xWktzJV9S7ZF87BYZpxE')
 
 // authorise and get rows
 doc.useServiceAccountAuth(creds, function (err) {
